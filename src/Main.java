@@ -58,5 +58,16 @@ public class Main {
             System.out.println(itemName[i] + " " + itemPrices[i]+ " " + checkAvailability);
 
         }
+
+        for (int i = 0; i < itemName.length; i++) {
+            System.out.println("Enter The Item Name:___");
+            String searchTerm = in.nextLine();
+
+            if(itemName[i].equalsIgnoreCase(searchTerm)) {
+                System.out.println(itemName[i]+ "\t" +itemPrices[i]+ "\t" +itemAvailable[i]);
+            } else {
+                System.out.println("Item Not Found.");
+            }
+        }
     }
 }
