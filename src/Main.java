@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     static void main(String[] args) {
         String[] itemName = {"Rose Milk", "Cocktail", "Peak Milk"};
