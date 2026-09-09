@@ -4,6 +4,10 @@ public class Main {
         double[] itemPrices = {110, 35, 90};
         boolean[] itemAvailable = {true, false, true};
 
+//        add items to the Array using Scanner class/object
+        Scanner in = new Scanner(System.in);
+
+//        Print the item one-by-one
         for (int i = 0; i < itemName.length; i++) {
 
             String checkAvailability = null;
