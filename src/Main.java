@@ -2,6 +2,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    public static int findItemsIndexByName(String[] names, String query) {
+        // look-up / search for item name
+        for (int i = 0; i < names.length; i++) {
+            if (names[i].equalsIgnoreCase(query)) {
+                return i;
+            }
+        }
+        // done searching
+        return -1;
+    }
+
     public static void printMenu(String[] itemName, double[] itemPrices, boolean[] itemAvailable) {
         for (int i = 0; i < itemName.length; i++) {
 
@@ -87,5 +98,16 @@ public class Main {
         in.nextLine();
 
         findItemIndexByName(in, itemName, itemPrices, itemAvailable);
+
+//      Linear search by item name
+        int index = findItemsIndexByName(itemName, "COCKTAIL");
+        System.out.println(index);
+
+//      item is not found
+        if (index == -1 ) {
+            System.out.println("Item Not Found!");
+        } else {
+            System.out.println("Item Is At Index: " +index+ " - " +itemName);
+        }
     }
 }
